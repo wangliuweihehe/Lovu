@@ -1,26 +1,3 @@
-import lovu from './views/startup';
-import {
-  AppRegistry,
-  StyleSheet,
-} from 'react-native';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('lovu', () => lovu);
+import startup from './views/startup';
+import {AppRegistry} from 'react-native';
+AppRegistry.registerComponent('lovu', () => startup);
