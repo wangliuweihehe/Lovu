@@ -9,8 +9,8 @@ export default class Index extends Component{
 		return(
 				<NativeRouter>
 					<View>
-						<Route exact path="/" component={Home}></Route>
-						<Route path="/startup" component={StartUp}></Route>
+						<Route exact path="/" component={StartUp}></Route>
+						<Route path="/home" component={Home}></Route>
 					</View>
 				</NativeRouter>
 			)
