@@ -5,7 +5,7 @@ import styles from '../styles/startup';
 export default class Startup extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Image style={styles.image} source={require('../images/icon.png')}/>
         <Text style={styles.title}>
           LOVU
