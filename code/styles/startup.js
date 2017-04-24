@@ -3,10 +3,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
     position:'absolute',
     top:200,
-    width:'100%'
+    width:'100%',
+    color: '#ff674a'
   },
   instructions: {
     width:'100%',
@@ -14,7 +14,8 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
     position:'absolute',
-    bottom:100
+    bottom:100,
+    color: '#ff674a'
   },
   image:{
     width:100,

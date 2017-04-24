@@ -1,4 +1,4 @@
-import Index from './views/index';
+import Index from './components/index';
 import {AppRegistry} from 'react-native';
 
 AppRegistry.registerComponent('lovu', () => Index);
