@@ -7,7 +7,8 @@ export default class Startup extends Component {
     super(props);
   }
   componentDidMount(){
-    
+    /*redirect to home after 3s*/ 
+    setTimeout(()=>this.props.history.push('/home'),10000); 
   }
   render() {
     return (
