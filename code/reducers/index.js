@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
 import startUp from './startUp'
-import home from './home'
+import homeMenus from './home'
 
 const Reducers = combineReducers({
     startUp,
-    home
+    homeMenus
 })
 
 export default Reducers

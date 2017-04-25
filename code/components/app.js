@@ -9,11 +9,12 @@ const history = createHistory();
 
 export default class Index extends Component{
 	render(){
+		let homeMenus = this.props.homeMenus;
 		return(
 				<NativeRouter history={history}>
 					<View>
 						<Route exact path="/" component={StartUp}></Route>
-						<Route path="/home" component={Home}></Route>
+						<Route path="/home" render={() => <Home homeMenus={homeMenus}/>}></Route>
 					</View>
 				</NativeRouter>
 			)

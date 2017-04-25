@@ -4,11 +4,11 @@ import {Link } from 'react-router-native';
 
 export default class Home extends Component {
   render() {
-  	let homeMenus = this.props.homeMenus;
     return (
       <View>
-      	
-
+        <Link to="/startup">
+            <Text>anniversary</Text>
+        </Link>
       </View>
     );
   }

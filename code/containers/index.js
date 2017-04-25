@@ -5,8 +5,10 @@ import { createStore } from 'redux';
 import Reducers from '../reducers/index';
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
+import initalState from './initalState';
 
-const store = createStore(Reducers);
+const store = createStore(Reducers,initalState);
+
 // Connected Component
 const Lovu = connect(
     mapStateToProps,

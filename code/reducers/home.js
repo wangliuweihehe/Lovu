@@ -1,4 +1,4 @@
-export default function home(state = 0, action) {
+export default function homeMenus(state= {}, action) {
     switch(action.type) {
         default:
             return state
