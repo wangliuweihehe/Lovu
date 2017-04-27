@@ -14,12 +14,11 @@ export default class Home extends Component {
     };
   }
   _renderRow(rowData){
-    var src = rowData.icon;
   	return(
       <Link to={rowData.linkTo}>
-        <LinearGradient colors={rowData.colors} start={{x:0,y:0}} end={{x:1,y:1}}>
-            <View style={styles.item}>
-              <Image style={styles.image} source={require(src)}/>
+        <LinearGradient colors={rowData.colors} start={{x:0,y:0}} end={{x:1,y:1}} style={styles.item}>
+            <View>
+              <Image style={styles.image} source={{uri:rowData.icon}}/>
               <Text style={styles.title}>{rowData.title}</Text>
             </View>
         </LinearGradient>
