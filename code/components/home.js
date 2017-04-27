@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text,View,Image,ListView} from 'react-native';
 import {Link } from 'react-router-native';
 import LinearGradient from 'react-native-linear-gradient';
+import styles from '../styles/home'
 
 export default class Home extends Component {
   constructor(props) {
@@ -13,10 +14,16 @@ export default class Home extends Component {
     };
   }
   _renderRow(rowData){
+    var src = rowData.icon;
   	return(
-  	<LinearGradient colors={rowData.colors}>
-		<Text>{rowData.title}</Text>
-	</LinearGradient>
+      <Link to={rowData.linkTo}>
+        <LinearGradient colors={rowData.colors} start={{x:0,y:0}} end={{x:1,y:1}}>
+            <View style={styles.item}>
+              <Image style={styles.image} source={require(src)}/>
+              <Text style={styles.title}>{rowData.title}</Text>
+            </View>
+        </LinearGradient>
+      </Link>
 	)
   }
   render() {
