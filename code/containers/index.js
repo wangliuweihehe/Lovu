@@ -5,7 +5,7 @@ import { createStore } from 'redux';
 import Reducers from '../reducers/index';
 import mapStateToProps from './mapStateToProps';
 import mapDispatchToProps from './mapDispatchToProps';
-import initalState from './initalState';
+import initalState from '../initalState/index';
 
 const store = createStore(Reducers,initalState);
 

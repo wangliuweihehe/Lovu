@@ -6,15 +6,16 @@ const styles = StyleSheet.create({
     marginLeft:"auto",
     marginRight:"auto",
     marginTop:30,
-    position:"relative"
+    position:"relative",
+    borderRadius:6
 
   },
   image:{
-    width:120,
-    height:120,
+    width:60,
+    height:60,
     position:"absolute",
-    left:10,
-    top:10
+    left:20,
+    top:20
 
   },
   title:{
