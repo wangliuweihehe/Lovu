@@ -4,7 +4,6 @@ import Photo from './photo';
 import Message from './message';
 import Time from './time';
 import Anniversary from './anniversary';
-import Routers from '../router/index'
 
 const Routers = [
 	{
