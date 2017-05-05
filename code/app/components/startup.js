@@ -3,30 +3,33 @@ import PropTypes from 'prop-types';
 import { Text,View,Image} from 'react-native';
 import styles from '../styles/startup';
 
-export default class Startup extends Component {
+class Startup extends Component {
   constructor(props){
     super(props);
-    console.log(this.props)
-    console.log("init")
   }
   componentDidMount(){
+    const {history} = this.props;
     /*redirect to home*/
-    // setTimeout(()=>this.props.history.replace('/home'),10000);
-  }
-  handleClick() {
-    console.log(this.props)
-    this.props.history.push('/home')
-    console.log(22222222)
+    setTimeout(function(){
+      console.log("redirect")
+      history.push('/home')
+    },7000);
   }
   render() {
     return (
-      <View onClick={this.handleClick}>
-        
-        <Text >startup</Text>
-        <Text  onPress={this.handleClick.bind(this)}>
-          startup
+      <View style={styles.bg}>
+        <Image style={styles.image}  source={require('../images/logo.gif')} />
+        <Text style={styles.title}>{this.props.title}</Text>
+        <Text style={styles.instructions}>
+          {this.props.instructions}
         </Text>
       </View>
     );
   }
 }
+
+Startup.propTypes =  {
+  title: PropTypes.string.isRequired,
+  instructions:PropTypes.string.isRequired
+}
+export default Startup

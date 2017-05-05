@@ -1,46 +1,35 @@
-import Home from './home';
-import createHistory from 'history/createMemoryHistory';
-import Photo from './photo';
-import Message from './message';
-import Time from './time';
-import Anniversary from './anniversary';
+import StartUp from '../containers/startup';
+import Home from '../components/home';
+import Photo from '../components/photo';
+import Message from '../components/message';
+import Time from '../components/time';
+import Anniversary from '../components/anniversary';
 
-const Routers = [
+const Routes = [
 	{
 		path:'/',
 		component:StartUp,
-		propName:startUp,
-		prop:this.props.startUp
+		exact:true
 	},
 	{
 		path:'/home',
-		component:Home,
-		propName:homeMenus,
-		prop:this.props.homeMenus
+		component:Home
 	},
 	{
 		path:'/time',
-		component:Time,
-		propName:time,
-		prop:this.props.time
+		component:Time
 	},
 	{
 		path:'/photo',
-		component:Photo,
-		propName:startUp,
-		prop:this.props.photo
+		component:Photo
 	},
 	{
 		path:'/message',
-		component:Message,
-		propName:message,
-		prop:this.props.message
+		component:Message
 	},
 	{
 		path:'/anniversary',
-		component:Anniversary,
-		propName:anniversary,
-		prop:this.props.anniversary
+		component:Anniversary
 	}
 ];
-export default Routers;
+export default Routes;

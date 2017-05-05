@@ -1,4 +1,4 @@
-import Index from './app/containers/index';
+import App from './app/index';
 import {AppRegistry} from 'react-native';
 
-AppRegistry.registerComponent('lovu', () => Index);
+AppRegistry.registerComponent('lovu', () => App);
