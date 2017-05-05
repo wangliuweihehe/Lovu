@@ -10,10 +10,13 @@ class Startup extends Component {
   componentDidMount(){
     const {history} = this.props;
     /*redirect to home*/
-    setTimeout(function(){
-      console.log("redirect")
-      history.push('/home')
-    },7000);
+    this.timeoutId = setTimeout(function(){
+      console.log("redirect2")
+      // history.push('/home')
+    },10000);
+  }
+  componentWillUnmount() {
+    clearTimeout(this.timeoutId)
   }
   render() {
     return (
