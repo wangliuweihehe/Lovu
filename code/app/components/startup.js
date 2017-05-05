@@ -8,12 +8,11 @@ class Startup extends Component {
     super(props);
   }
   componentDidMount(){
-    const {history} = this.props;
+    const {history, delayTime,redirect} = this.props;
     /*redirect to home*/
     this.timeoutId = setTimeout(function(){
-      console.log("redirect2")
-      // history.push('/home')
-    },10000);
+      history.push(redirect);
+    },delayTime);
   }
   componentWillUnmount() {
     clearTimeout(this.timeoutId)
