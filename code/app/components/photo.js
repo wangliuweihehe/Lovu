@@ -34,16 +34,30 @@ class Photo extends Component {
             }
         })
     }
+    renderAlbum(album,index){
+        return(
+        <TouchableOpacity key={index}>
+            <Image style={styles.img} source={album.img}/>
+            <Text>{album.title}</Text>
+            <Text>{album.count}</Text>
+        </TouchableOpacity>
+        )
+    }
     render() {
+        const {albums} = this.props;
         return ( 
         	< View>
             	<TouchableOpacity onPress = { this.selectPhotoTapped.bind(this) }>
-                    < Text > Select a Photo < /Text>
+                    < Text > setup a new album < /Text>
                 </TouchableOpacity>
-            
+                {albums.map((album,index)=>
+                    this.renderAlbum(album,index)
+                )}
             < /View>
         )
     }
 }
-
+Photo.propTypes =  {
+  albums: PropTypes.array.isRequired
+}
 export default Photo

@@ -10,15 +10,16 @@ class Home extends Component {
     super(props);
   }
   renderRow(rowData, index){
+    const {linkTo,start,end,locations,colors,icon} = rowData
         return(
-          <Link to={rowData.linkTo}  key ={index}>
+          <Link to={linkTo}  key ={index}>
             <LinearGradient style={styles.item}
-            start={rowData.start} 
-            end={rowData.end}
-            locations={rowData.locations}
-            colors={rowData.colors}
+            start={start} 
+            end={end}
+            locations={locations}
+            colors={colors}
             >
-              <Image style={styles.image} source={{uri:rowData.icon}} />
+              <Image style={styles.image} source={icon} />
               <Text style={styles.title}>{rowData.title}</Text>
           </LinearGradient>
           </Link>     

@@ -1,6 +1,18 @@
 const photo = {
-    date: {year:2016,month:11,day:11,hour:11},
-    title: "Darling, we have been toghter for 3 days!"
+    albums:[{
+    	img:require('../images/me.jpg'),
+    	title:"about me",
+    	count:'20'
+    },
+    {
+    	img:require('../images/me.jpg'),
+    	title:"about me",
+    	count:'30'
+    },{
+    	img:require('../images/me.jpg'),
+    	title:"about me",
+    	count:'10'
+    }]
 }
 
 export default photo

@@ -18,12 +18,13 @@ class Startup extends Component {
     clearTimeout(this.timeoutId)
   }
   render() {
+    const {icon,title, instructions} = this.props;
     return (
       <View style={styles.bg}>
-        <Image style={styles.image}  source={require('../images/logo.gif')} />
-        <Text style={styles.title}>{this.props.title}</Text>
+        <Image style={styles.image}  source={icon} />
+        <Text style={styles.title}>{title}</Text>
         <Text style={styles.instructions}>
-          {this.props.instructions}
+          {instructions}
         </Text>
       </View>
     );

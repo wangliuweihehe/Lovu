@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const mapStateToProps = (state, ownProps) => (
 {
-  photo: state.photo
+  albums: state.photo.albums
 })
 // Connected Component
 export default connect(

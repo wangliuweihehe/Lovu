@@ -7,7 +7,8 @@ const mapStateToProps = (state, ownProps) => (
   title: state.startUp.title,
   instructions: state.startUp.instructions,
   delayTime: state.startUp.delayTime,
-  redirect :state.startUp.redirect
+  redirect :state.startUp.redirect,
+  icon :state.startUp.icon
 })
 // Connected Component
 export default connect(
