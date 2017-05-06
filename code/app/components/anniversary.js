@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Text,View,Image} from 'react-native';
 import {Link } from 'react-router-native';
 
-export default class Anniversary extends Component {
+class Anniversary extends Component {
   render() {
     return (
       <View>
-        <Link to="/startup">
+        
             <Text>anniversary</Text>
-        </Link>
+        
       </View>
     );
   }
 }
+Anniversary.propTypes ={
+	date:PropTypes.object.isRequired,
+	title:PropTypes.string.isRequired
+}
+export default Anniversary

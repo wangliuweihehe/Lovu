@@ -11,13 +11,12 @@ class Home extends Component {
   }
   renderRow(rowData, index){
         return(
-          <Link to={rowData.linkTo}>
+          <Link to={rowData.linkTo}  key ={index}>
             <LinearGradient style={styles.item}
             start={rowData.start} 
             end={rowData.end}
             locations={rowData.locations}
             colors={rowData.colors}
-            key ={index}
             >
               <Image style={styles.image} source={{uri:rowData.icon}} />
               <Text style={styles.title}>{rowData.title}</Text>

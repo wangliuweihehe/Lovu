@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Text,View,Image} from 'react-native';
 import {Link } from 'react-router-native';
 
-export default class Message extends Component {
+class Message extends Component {
   render() {
     return (
       <View>
-        <Link to="/startup">
+       
             <Text>message</Text>
-        </Link>
+        
       </View>
     );
   }
 }
+Message.propTypes ={
+	date:PropTypes.object.isRequired,
+	title:PropTypes.string.isRequired
+}
+export default Message
