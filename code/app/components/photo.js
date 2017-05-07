@@ -34,9 +34,13 @@ class Photo extends Component {
             }
         })
     }
+    goBack(){
+        const {history} = this.props;
+        history.go(-1);
+    }
     renderAlbum(album,index){
         return(
-        <TouchableOpacity key={index}>
+        <TouchableOpacity key={index} style={styles.album}>
             <Image style={styles.img} source={album.img}/>
             <Text>{album.title}</Text>
             <Text>{album.count}</Text>
@@ -46,8 +50,9 @@ class Photo extends Component {
     render() {
         const {albums} = this.props;
         return ( 
-        	< View>
-            	<TouchableOpacity onPress = { this.selectPhotoTapped.bind(this) }>
+        	< View style={styles.bg}>
+                <Text onPress={this.goBack.bind(this)} style={styles.back}>back</Text>
+            	<TouchableOpacity onPress = { this.selectPhotoTapped.bind(this) } style={styles.newAlbum}>
                     < Text > setup a new album < /Text>
                 </TouchableOpacity>
                 {albums.map((album,index)=>
