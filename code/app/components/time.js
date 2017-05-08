@@ -49,7 +49,9 @@ class Time extends Component {
     const word  = dayLength.days+ "  days  " +dayLength.hours+"  hours";
     return (
       <View style={styles.bg}>
-          <Text onPress={this.goBack.bind(this)} style={styles.goBack}>back</Text>
+          <Text onPress={this.goBack.bind(this)} style={styles.goBack}>
+              <Image style={styles.backImg} source={require('../images/back.png')}/>
+          </Text>
           <View style={styles.titleBox}>
               <Text style={styles.title}>{title}</Text>
               <View><Text style={styles.subTitle}>{word}</Text></View>

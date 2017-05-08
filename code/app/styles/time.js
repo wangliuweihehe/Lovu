@@ -24,6 +24,10 @@ const styles = StyleSheet.create({
     left:10,
     color: '#ff674a'
   },
+  backImg:{
+    width:30,
+    height:30
+  },
   bg:{
     backgroundColor:'#fff4ea',
     position:'relative',

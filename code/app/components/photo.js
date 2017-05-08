@@ -40,24 +40,34 @@ class Photo extends Component {
     }
     renderAlbum(album,index){
         return(
-        <TouchableOpacity key={index} style={styles.album}>
-            <Image style={styles.img} source={album.img}/>
-            <Text>{album.title}</Text>
-            <Text>{album.count}</Text>
-        </TouchableOpacity>
+            <Link key={index} style={styles.album} >
+                <TouchableOpacity >
+                    <Image style={styles.img} source={album.img}/>
+                    <View style={styles.albumMask}>
+                        <Text style={styles.albumMaskLeftWord}>{album.title}</Text>
+                        <Text style={styles.albumMaskRightWord}>{album.count}</Text>
+                    </View>
+                </TouchableOpacity>
+            </Link>
         )
     }
     render() {
         const {albums} = this.props;
         return ( 
         	< View style={styles.bg}>
-                <Text onPress={this.goBack.bind(this)} style={styles.back}>back</Text>
-            	<TouchableOpacity onPress = { this.selectPhotoTapped.bind(this) } style={styles.newAlbum}>
-                    < Text > setup a new album < /Text>
-                </TouchableOpacity>
-                {albums.map((album,index)=>
-                    this.renderAlbum(album,index)
-                )}
+                <Text onPress={this.goBack.bind(this)} style={styles.back}>
+                    <Image style={styles.backImg} source={require('../images/back.png')}/>
+                </Text>
+                <View style={styles.container}>
+                    <TouchableOpacity onPress = { this.selectPhotoTapped.bind(this) } style={styles.newAlbum}>
+                        <Image style={styles.plusImg} source={require('../images/plus.png')}/>
+                        < Text style={styles.newAlbumText}> setup a new album < /Text>
+                    </TouchableOpacity>
+                    {albums.map((album,index)=>
+                        this.renderAlbum(album,index)
+                    )}
+                </View>
+            	
             < /View>
         )
     }
